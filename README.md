@@ -1,15 +1,21 @@
-# Jaeger Tracing Template
+# Jaeger All In One
 
-Minimalist Jaeger All-in-One deployment for Railway.
+**"Just one click to trace and monitor the lifecycle of your applications."**
 
-## ⚙️ Configuration
-This deployment uses the official Jaeger `all-in-one` image. By default, it runs with **in-memory storage**.
+## 🚀 Overview
+This template deploys a fully functional Jaeger Tracing instance on Railway. It is designed to give you instant visibility into request flows across your microservices (Java, Python, or JavaScript) with zero manual configuration.
 
 ## 🔌 Connection Endpoints
-If your application is also running on Railway, you can use private networking. Otherwise, use your public Railway domain:
+| Component     | Port  | Protocol | Purpose                          |
+| :------------ | :---- | :------- | :------------------------------- |
+| **Jaeger UI** | 16686 | HTTP     | Web Dashboard & Trace Search     |
+| **OTLP gRPC** | 4317  | gRPC     | High-performance Trace Ingestion |
+| **OTLP HTTP** | 4318  | HTTP     | Web-friendly Trace Ingestion     |
 
-| Component     | Port  | Protocol |
-| :------------ | :---- | :------- |
-| **Jaeger UI** | 16686 | HTTP     |
-| **OTLP gRPC** | 4317  | gRPC     |
-| **OTLP HTTP** | 4318  | HTTP     |
+## ⚙️ Key Features
+- **Instant Deployment:** Ready to use in a single click via Railway.
+- **Full Observability:** Built-in support for OpenTelemetry standards.
+- **In-Memory Storage:** Fast performance for development and debugging.
+
+## ⚠️ Persistence Note
+Data is stored in-memory. All traces will be reset if the Railway service restarts or redeploys.

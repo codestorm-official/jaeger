@@ -5,6 +5,7 @@
         "dockerfilePath": "Dockerfile"
     },
     "deploy": {
+        "serviceName": "jaeger-all-in-one",
         "numReplicas": 1,
         "sleepService": false,
         "restartPolicyType": "ON_FAILURE"
